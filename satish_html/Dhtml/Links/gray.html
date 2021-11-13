@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+img
+{
+filter:gray()
+}
+</style>
+<script type="text/javascript">
+function color()
+{
+document.getElementById('myImage').style.filter=false
+}
+function gray()
+{
+document.getElementById('myImage').style.filter="gray()"
+}
+</script>
+</head>
+
+<body>
+<b>Mouse over the image-link:</b><br />
+<a href="default.asp">
+<img id="myImage" border="0" src="C:\WINDOWS\Desktop\chandramukhi_gif_files\chandramukhi.gif" onmouseover="color()" onmouseout="gray()" width="32" height="32" />
+</a>
+</body>
+
+</html>
+

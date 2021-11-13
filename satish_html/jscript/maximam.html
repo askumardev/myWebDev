@@ -1,0 +1,23 @@
+<html>
+<body>
+<script type="text/javascript">
+var i1=prompt("enter 1no","0");
+var i2=prompt("enter 2no","0");
+var i3=prompt("emter 3no","0");
+
+var n1=parseInt(i1);
+var n2=parseInt(i2);
+var n3=parseInt(i3);
+
+var maxvalue= max(n1,n2,n3)
+document.write(n1+"\t"+n2+"\t"+n3,"<br>"+
+		"maximum of 3 numbers is"+ maxvalue);
+
+function max(x,y,z)
+{ var i= Math.max(x,Math.max(y,z))
+return i;
+}
+</script>
+</body>
+</html>
+

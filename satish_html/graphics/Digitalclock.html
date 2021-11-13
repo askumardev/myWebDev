@@ -1,0 +1,19 @@
+<html>
+<head>
+<script language="javascript">
+function start()
+{ window.setInterval("run()",10);
+} 
+function run()
+{ var d=new Date();
+  hh=d.getHours();
+  mm=d.getMinutes();
+  ss=d.getSeconds();
+  h.innerText=hh+":" +ss;
+}
+</script>
+</head>
+<body bgcolor=pink onload="start()">
+<h1> Digital Clock </h1>
+<h1 id="h"> Rekha </h1>
+</html>

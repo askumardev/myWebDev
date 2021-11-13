@@ -1,0 +1,67 @@
+<html>
+<head>
+<style>
+div
+{
+width:160px;
+height:120px;
+}
+img
+{
+position:relative;
+}
+span
+{
+position:absolute;
+left:0px;
+top:0px;
+}
+</style>
+<script type="text/javascript">
+mouseover=true
+
+function coordinates()
+{
+if (!moveMe)
+	{
+	return
+	}
+if (event.srcElement.id=="moveMe")
+	{
+	mouseover=true
+	pleft=document.getElementById('moveMe').style.pixelLeft
+	ptop=document.getElementById('moveMe').style.pixelTop
+	xcoor=event.clientX
+	ycoor=event.clientY
+	document.onmousemove=moveImage
+	}
+}
+
+function moveImage()
+{
+if (mouseover&&event.button==1)
+	{
+	document.getElementById('moveMe').style.pixelLeft=pleft+event.clientX-xcoor
+	document.getElementById('moveMe').style.pixelTop=ptop+event.clientY-ycoor
+	return false
+	}
+}
+function mouseup()
+{
+mouseover=false
+}
+document.onmousedown=coordinates
+document.onmouseup=mouseup
+</script>
+
+</head>
+<body>
+<span>Move the circle</span>
+<br>
+<div style="position:absolute;left:0;top:20;">
+<img src="landscape.jpg" width="160" height="120" /></div>
+<div style="position:absolute;left:0;top:20;filter:mask(color=#ffffff);width:160;height:120">
+<img id="moveMe" src="smiley.gif" width="40" height="40"></div>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<html>
+<body>
+<script language="javascript">
+
+var  chioce;
+var starttag;
+var endtag;
+var listtype;
+var validinput;
+var listtype;
+chioce=prompt("select ur list style:'\n' 1(bullets)'\t'2(numbers)'\t' 3(letters)");
+
+
+
+
+switch(choice)
+{ case "1" :  starttag="<ul>";
+	    endtag="</ul>";
+	    listtype="<b> bullets list</b>";
+	    break;
+case "2":     starttag="<ol>";
+	    endtag="</ol>";
+	    listtype="<b> numbers list</b>";
+	    break;
+case "3":     starttag="<ol type='A'>";
+	    endtag="</ol>";
+	    listtype="<b> letters list</b>";
+	    break;
+default:   validinput=false;
+ }
+if(validinput==true)
+ { document.writeln(listtype+starttag);
+   for(var i=0;i<=5;i++)
+   document.writeln("<li> listitem" +i+"</li>");
+   document.wtiteln(endtag);
+ }
+else
+document.writeln("invalid number");
+
+
+</script>
+</body>
+</html>
+

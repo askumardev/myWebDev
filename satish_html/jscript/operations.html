@@ -1,0 +1,39 @@
+<html>
+<head>
+<title> Arithematic operatios 
+</title>
+
+<script language="javascript">
+function cal(op)
+{
+	var a,b, result=0;
+ 	a=parseInt(document.form1.first.value);
+	b=parseInt(document.form1.sec.value);
+switch(op)
+	{ case'+': result=a+b; break;
+	  case'-': result=a-b; break;
+	  case'*': result=a*b; break;
+	  case'/': result=a/b; break;
+ 	}
+document.form1.result.value=result;
+}
+</script>
+</head>
+<body bgcolor="tan">
+<form name="form1">
+<h1> Simple arithematic operations: </h1>
+	<table border=2>
+	<tr>
+	<th>First Number
+	<td><input type=text name=first size=15>
+	<tr><th>Second Number
+	<td> <input type=text name=sec size=15>
+	<tr><th>Result:
+	<td><input type=text name=result size=15>
+</table><p>
+<input type=button value="Addition" onclick=cal('+')>
+<input type=button value="Subtraction" onclick=cal('-')>
+<input type=button value="Multiply" onclick=cal('*')>
+<input type=button value="Divide" onclick=cal('/')>
+</body>
+</html>

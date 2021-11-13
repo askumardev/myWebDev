@@ -1,0 +1,59 @@
+<html>
+<head>
+<script language="javascript">
+function fib()
+{ 	var value=parseInt(myform.input.value);
+        
+       myform.result.value=fibnocci(value);
+ 
+// document.write("the values are"+fibseries(value));
+
+}
+function fibnocci(n)
+{
+	if(n==0||n==1)
+	return n;
+else
+	return fibnocci(n-1)+fibnocci(n-2);
+}
+
+
+/*function fibseries(n)
+{	var a=0,b=1,c;
+	document.write(a);
+	document.write("\t"+b)
+      c=parseInt(a)+parseInt(b);
+	while(c<=n)	
+	{
+	document.write("\t"+c)
+	a=b;
+	b=c;
+c=parseInt(a)+parseInt(b);
+	}
+}*/
+</script>
+</head>
+<body>
+<form name="myform">
+enter no:<input type=text name=input>
+<input type=button value=fibnocci onclick=fib()>
+sum of fibnocci no.s:<input type=text name=result>
+</form>
+<script language="javascript">
+var v=parseInt(myform.input.value);
+var a=0,b=1,c;
+	document.write(a);
+	document.write("\t"+b)
+      c=parseInt(a)+parseInt(b);
+
+	while(c<=v)	
+	{
+	document.write("\t"+c)
+	a=b;
+	b=c;
+c=parseInt(a)+parseInt(b);
+	}
+</script>
+
+</body>
+</html>

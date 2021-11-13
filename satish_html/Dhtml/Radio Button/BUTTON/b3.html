@@ -1,0 +1,34 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function bgChange(bg)
+{
+document.getElementById('x').style.background="url(" + bg + ")"
+}
+</script>
+</head>
+
+<body>
+
+<p>This example demonstrates how to insert a background image to a button</p>
+<p>Mouse over these images and the button will get a background image.</p>
+
+<table width="300" height="100">
+ <tr>
+  <td onmouseover="bgChange('C:\WINDOWS\SYSTEM\OOBE\IMAGES\HOVERR.GIF')" 
+      background="C:\WINDOWS\SYSTEM\OOBE\IMAGES\HOVERR.GIF">
+  </td>
+  <td onmouseover="bgChange('C:\WINDOWS\SYSTEM\OOBE\IMAGES\OEMLOGO.GIF')" 
+      background="C:\WINDOWS\SYSTEM\OOBE\IMAGES\OEMLOGO.GIF">
+  </td>
+</tr>
+</table>
+
+<form>
+<input id="x" type="button" value="Mouse over the images">
+</form>
+
+</body>
+</html>
+

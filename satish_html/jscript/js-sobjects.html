@@ -1,0 +1,21 @@
+<html>
+<body>
+<script language="javascript">
+function splitpressed()
+{ 	var string=myform.inputval.value.split(" ");
+	myform.output.value=string.join("\n");
+	myform.outputsub.value=myform.inputval.value.substring(0,10)
+}
+</script>
+</head>
+<form name="myform">
+enter a sentense<input type=text name="inputval">
+<input type=button value=split onclick="splitpressed()"><br>
+the sentence split into words is:
+<textarea name="output" rows=8 cols=40>
+</textarea><br>
+ the first 10 chars are<input  type=text  name="outputsub">
+
+</body>
+</html>
+

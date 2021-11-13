@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+div
+{
+position:absolute;
+left:10px;
+top:100px;
+width:160px;
+height:120px;
+}
+</style>
+<script type="text/javascript">
+function getFilter()
+{
+document.getElementById('myDiv').style.filter="mask(color=#ffffff)"
+}
+function noFilter()
+{
+document.getElementById('myDiv').style.filter=false
+}
+</script>
+</head>
+
+<body>
+<p>This example demonstrates how to dynamically insert the mask filter.</p>
+<p>Mouse over the image below</p>
+<div><img src="C:\WINDOWS\Desktop\chandramukhi_gif_files\chandramukhi.gif" width="160" height="120"></div>
+<div onmouseover="getFilter()" onmouseout="noFilter()" id="myDiv">
+<h1>Mouse over this image landscape</h1></div>
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+<HEAD>
+<SCRIPT>
+var startImage ="fruit.gif";
+var endImage="mouse.gif";
+function doTrans() {
+        
+        imgObj.filters[0].apply();
+        if (oImg.src.indexOf(startImage)!=-1) {
+            oImg.src = endImage;
+            imgObj.style.backgroundColor = "gold";
+            imgObjText.innerHTML =             "<BR><B>Second Page</B><BR><BR>Using the <B>play</B> method reveals the changes in the SPAN element content."        }
+        else {
+            oImg.src = startImage;
+            imgObj.style.backgroundColor = "skyblue";
+            imgObjText.innerHTML =             "<BR><b>First Page</b><BR><BR>Using the <B>apply</B> method prepares this SPAN element for content changes."        }
+        imgObj.filters[0].play();
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<SPAN id=imgObj style="PADDING-RIGHT: 10px; PADDING-LEFT: 13px; FILTER: progid:DXImageTransform.Microsoft.Blinds( Bands=10,direction=left); FONT: 9pt/1.3 verdana; WIDTH: 305px; COLOR: black; HEIGHT: 150px; BACKGROUND-COLOR: gold"><IMG id=oImg style="MARGIN: 8px" src="mouse.gif" align=left>
+<DIV id=imgObjText><BR><B>Second Page</B><BR><BR>Using the <B>play</B> method reveals the changes in the SPAN element content.</DIV></SPAN><BR><BR>
+<BUTTON onclick="doTrans()">Play Transition</BUTTON>
+</BODY>

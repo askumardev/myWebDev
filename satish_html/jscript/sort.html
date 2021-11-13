@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+function ss()
+{ var a=[10,1,9,2,8,3,7,4,6,5]; 
+document.write("Sorting array:");
+output("data items in original order:",a);
+a.sort(compareIntegers);
+output("data items in asending order",a);
+}
+function output(hh,aa)
+{ document. write("</p>"+hh+aa.join(" ")+"</p>")
+  }
+function compareIntegers(value1,value2)
+{ return parseInt(value1) - parseInt(value2);
+}
+</script>
+</head>
+<body onload= "ss()">
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+<script type="text/javascript">
+function changeColor(color)
+{
+myForm.elements[0].style.color=color
+}
+</script>
+</head>
+<body>
+
+<p>This example demonstrates how to change the text color of an option list.</p>
+
+<p>Mouse over the three colored table cells, and the option list will change color:</p>
+
+<table width="100%"><tr>
+<td bgcolor="red" onmouseover="changeColor('red')"> </td>
+<td bgcolor="blue" onmouseover="changeColor('blue')"> </td>
+<td bgcolor="green" onmouseover="changeColor('green')"> </td>
+</tr></table>
+
+<form name="myForm">
+<select>
+<option>Mouse over the colored table cells
+<option>Mouse over the colored table cells
+<option>Mouse over the colored table cells
+<option>Mouse over the colored table cells
+</select>
+</form>
+
+</body>
+</html>
+

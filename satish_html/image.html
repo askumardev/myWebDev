@@ -1,0 +1,26 @@
+<HTML> 
+ <HEAD> 
+  <SCRIPT  LANGUAGE="JavaScript"> 
+var image="HLPCD.GIF";
+function aa()
+{
+ f.filters[0].apply(); 
+ ii.src = image;
+f.style.backgroundColor="red";
+ dd.innerHTML ="<p>hello this is second page"; 
+ f.filters[0].play(); 
+}
+</script> 
+ </HEAD> 
+<BODY> 
+ <span id="f" style="position:relative;width:300;height:280;top:20;left:20;
+text-align:center;background-color:#ffaacc;
+filter:revealTrans(transition=3,duration=1)">  
+
+<img id="ii" src='C:\WINDOWS\HLPBELL.GIF' >
+
+<div id="dd" ><br>hi this is first page </div>
+</span> <br><br><br> 
+<button onClick="aa()"> play  </button> <br>
+</BODY> 
+ </HTML>

@@ -1,0 +1,40 @@
+<html>
+<head>
+<script language="javascript">
+var a =new Array(50)
+document.write("The values are"+ "<br>");
+for(var i=1;i<a.length;i++)
+{   a[i]=2*i;
+    
+    document.write(a[i]+"\t")
+}
+function buttonpressed()
+{	var key=searchform.inputval.value;
+	var e=linearsearch(a,parseInt(key));
+	if(e!=-1)
+	searchform.result.value="found value in element"+e;
+	else
+	searchform.result.value="value not found";
+}
+function linearsearch(array,k)
+{	for(var n=0;n<array.length;n++)
+	if(array[n]==k)
+         {
+	  return n;
+         }
+        return -1; 
+	}
+</script>
+</head>
+
+
+<body>
+<form name="searchform">
+enter search key<input type=text name="inputval">
+<input name="search" type=button value=search onclick="buttonpressed()">
+result<input name="result" type=text size=20>
+</form>
+</body>
+</html>
+
+

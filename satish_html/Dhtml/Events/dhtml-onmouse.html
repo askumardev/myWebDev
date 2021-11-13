@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+function bgChange(bg)
+{
+document.body.style.background=bg
+}
+</script>
+</head>
+<body>
+<b>Mouse over the squares and the background color will change!</b>
+<table width="300" height="100">
+ <tr>
+  <td onmouseover="bgChange('red')" 
+      onmouseout="bgChange('pink')"
+      bgcolor="red">
+  </td>
+  <td onmouseover="bgChange('blue')" 
+      onmouseout="bgChange('pink')"
+      bgcolor="blue">
+  </td>
+  <td onmouseover="bgChange('green')" 
+      onmouseout="bgChange('pink')"
+      bgcolor="green">
+  </td>
+</tr>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+a
+{
+color:black;
+width:150;
+font:bold;
+}
+</style>
+<script type="text/javascript">
+var i
+function glow()
+{
+i=0
+interval=setInterval("makeglow(myLink)",10)
+}
+
+function back()
+{
+clearInterval(interval)
+document.getElementById('myLink').style.filter=false
+}
+
+function makeglow()
+{
+i++
+if (i<5)
+	{
+	document.getElementById('myLink').style.filter="glow(color=#FF00FF,strength=" + i + ")"
+	}
+else if (window.interval)
+	{
+	clearInterval(interval)
+	}
+}
+</script>
+</head>
+
+<body>
+<a href="default.asp" id="myLink" onmouseover="glow()" onmouseout="back()">Mouse over this link</a>
+</body>
+
+</html>
+

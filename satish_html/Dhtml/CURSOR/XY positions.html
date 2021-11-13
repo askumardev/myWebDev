@@ -1,0 +1,17 @@
+<html>
+<head>
+<script type="text/javascript">
+function cursorPos()
+{
+document.getElementById('xxx').innerHTML=event.clientX
+document.getElementById('yyy').innerHTML=event.clientY
+}
+</script>
+</head>
+<body onmousemove="cursorPos()">
+cursor X: <span id="xxx"></span>
+<br />
+cursor Y: <span id="yyy"></span>
+</body>
+</html>
+

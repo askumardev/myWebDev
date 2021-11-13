@@ -1,0 +1,37 @@
+<html>
+<head>
+<object id="employee" classid="CLSID:333C7BC4-460F-11D0-BC04-0080C7055A83">
+
+<param name="DataURL" value ="emp.txt">
+<param name="UseHeader" value="true">
+<param name="FieldDelim" value="|">
+</object>
+
+<script language="javascript">
+var rs=employee.recordset;
+ function next()
+    {	if(!rs.EOF)
+	  rs.MoveNext();
+    else
+	  rs.MoveFirst();
+disp();
+    }
+function disp()
+{if(!rs.EOf)
+ r.innerText=rs.absolutePosition;
+else
+r.innerText="";
+}
+ 
+  
+</script>
+</head>
+<body bgcolor=tan onload="disp()" >  
+<h1 style="color:white"> Employee list</h1>
+<b>Employee Number:</b> <span datasrc="#employee" datafld="eno"> </span><br>
+<b> employee name: </b> <span datasrc="#employee" datafld="ename"> </span><br>
+<b> record no:</b> <span id="r"> </span>
+<br><input type="button" onClick="next()" value="NEXT">
+</body>
+</html>
+

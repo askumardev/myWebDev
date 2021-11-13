@@ -1,0 +1,34 @@
+<html>
+<body>
+<script type="text/javascript">
+image0="/banners/w3schools.gif"
+href0="/default.asp"
+alt0="W3Schools.com"
+
+image1="/banners/rd_htmlref.jpg"
+href1="http://www.w3schools.com/html/html_reference.asp"
+alt1="HTML Reference"
+
+image2="/banners/rd_xhtml.jpg"
+href2="http://www.w3schools.com/xhtml/default.asp"
+alt2="ASP Free"
+
+len=3
+
+now=new Date()
+now=now.getSeconds()
+rnd=now%len
+
+image=eval("image"+rnd)
+href=eval("href"+rnd)
+alt=eval("alt"+rnd)
+
+document.write("<a href='" + href + "'>")
+document.write("<img src='" + image + "' alt='" + alt + "'></a>")
+</script>
+
+<h3>Refresh this page to see the banner change</h3>
+
+</body>
+</html>
+

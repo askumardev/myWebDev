@@ -1,0 +1,49 @@
+<html>
+<head>
+<script type="text/javascript">
+move=150
+var i=0
+var j=0
+var timer
+
+function moveheader()
+{
+document.getElementById('header').style.position="relative"
+if (i<=move)
+	{
+	document.getElementById('header').style.left=i
+	i++
+	}
+else
+	{
+	if (j<=move)
+		{
+		document.getElementById('header').style.top=j
+		j++
+		}
+	else
+		{
+		if (move>=0)
+			{
+			document.getElementById('header').style.left=move
+			document.getElementById('header').style.top=move
+			move--
+			}
+		}	
+	}	
+timer=setTimeout("moveheader()",1)
+}
+
+function stoptimer()
+{
+clearTimeout(timer)
+}
+</script>
+</head>
+
+<body onload="moveheader()" onunload="stoptimer()">
+<h1 id="header">W3Schools.com</h1>
+</body>
+
+</html>
+

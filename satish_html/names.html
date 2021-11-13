@@ -1,0 +1,27 @@
+<html>
+<head>
+<object id="names" classid="CLSID:333C7BC4-460F-11D0-BC04-0080C7055A83">
+
+<param name="DataURL" value ="names.txt">
+<param name="UseHeader" value="true">
+</object>
+
+<script language="javascript">
+var rs=names.recordset;
+ function next()
+    {	if(!rs.EOF)
+	  rs.MoveNext();
+    else
+	  rs.MoveFirst();
+    }
+document.onkeypress=next;
+</script>
+</head>
+<body bgcolor=tan>
+<h1><b> student names </b></h1><br>
+<span style="font-size:40" datasrc="#names" datafld="studnames"> 
+</span> <p>
+<h3> press any key to get next record </h3>
+</body>
+</html>
+

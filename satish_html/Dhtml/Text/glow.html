@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+h1
+{
+width:400;
+}
+</style>
+
+<script type="text/javascript">
+var i
+function glow()
+{
+i=0
+interval=setInterval("makeglow()",10)
+}
+
+function back()
+{
+clearInterval(interval)
+document.getElementById('myHeader').style.filter=false
+}
+
+function makeglow()
+{
+i++
+if (i<5)
+	{
+	document.getElementById('myHeader').style.filter="glow(strength=" + i + ")"
+	}
+else if (window.interval)
+	{
+	clearInterval(interval)
+	}
+}
+
+</script>
+</head>
+
+<body>
+<h1 id="myHeader" onmouseover="glow()" onmouseout="back()">Mouse over this header</h1>
+</body>
+
+</html>
+
