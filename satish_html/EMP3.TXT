@@ -1,4 +1,0 @@
-eno|ename|designation|salary
-101|rekha|cse|9000
-102|geetha|csit|12000
-103|satya|ece|15000

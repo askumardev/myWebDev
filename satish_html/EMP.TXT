@@ -1,5 +1,0 @@
-eno|ename
-101|Rekha
-102|Geetha
-103|Satya
-104|viajya
