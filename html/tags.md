@@ -1,6 +1,8 @@
 ## HTML5 Tags
 * HTML basic tags
-  <!DOCTYPE>	It defines the document type
+  | Syntax      | Description |
+  |-------------|-------------|
+  | <!DOCTYPE>	|It defines the document type |
   <html>	It is the root of HTML document
   <head>	It defines the head of an HTML document that contains non-visible data like metadata and other information
   <body>	It defines the body of a webpage and contains everything that you see on the webpage
