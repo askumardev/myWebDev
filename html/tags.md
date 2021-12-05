@@ -70,7 +70,7 @@
   |`<li>`	|It defines an item in a list|
   |`<dl>`	|It defines a description list|
   |`<dt>`	|It defines name or tern in description list|
-  |`<dd>`	It defines description of item in the description list|
+  |`<dd>`	|It defines description of item in the description list|
 
 * Form and input tags
   | Syntax      | Description |
