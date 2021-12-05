@@ -6,7 +6,7 @@
   |<html>	      |It is the root of HTML document|
   |<head>	      |It defines the head of an HTML document that contains non-visible data like metadata and other information|
   |<body>	      |It defines the body of a webpage and contains everything that you see on the webpage|
-  |<h1> to <h6>	|These are a group of heading tags used to create heading in a webpage|
+  |<h1> .. <h6>	|These are a group of heading tags used to create heading in a webpage|
   |<p>	        |It defines the paragraph in a webpage|
   |<!--...-->	  |It is used to write comments in HTML documents|
   |<br>	        |It defines a line break|
