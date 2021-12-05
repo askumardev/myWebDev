@@ -13,6 +13,8 @@
   |`<hr>`	        |It creates a horizontal line in a webpage|
 
 * Formatting tags
+  | Syntax      | Description |
+  |-------------|-------------|
   |`<b>`	|It is used to define bold text|
   |`<strong>`	|It is used to define important text, add more semantic meaning to the tag|
   |`<i>`	|It formats text in italic form|
