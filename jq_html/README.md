@@ -1,8 +1,3 @@
-## JavaScript projects
+## jQuery code
 
-- Countdown Timer
-- Quiz App
-- Recipe App
-- Notes App
-- Drawing App
-- ToDo App
+- Coming soon
