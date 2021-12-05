@@ -48,7 +48,7 @@
   |-------------|-------------|
   |`<img>`	|It defines image on webpage|
   |`<figure>`	|It defines a self-contained container for image, code snippets, diagrams, etc|
-  |`<figcaption>`	|It defines a caption for the <figure>|
+  |`<figcaption>`	|It defines a caption for the `<figure>`|
   |`<picture>`	|It defines a container to provide multiple resources for an image|
   |`<area>`	|It defines an area inside the image using coordinates|
   |`<map>`	|It defines a map on an image and creates a clickable area|
@@ -77,13 +77,13 @@
   |-------------|-------------|
   |`<form>`	|It is used to create a form on webpage|
   |`<input>`	|It defines input of different type|
-  |`<label>`	|It defines label for the <input> element|
+  |`<label>`	|It defines label for the `<input>` element|
   |`<textarea>`	|It defines resizable multi-line plain text input|
   |`<select>`	|It provides a control to select from multiple options|
-  |`<optgroup>`	|It defines a group of otions in <select> element|
-  |`<option>`	|It defines an item to select within <select> element|
+  |`<optgroup>`	|It defines a group of otions in `<select>` element|
+  |`<option>`	|It defines an item to select within `<select>` element|
   |`<fieldset>`	|It defines group of multiple labels and inputs|
-  |`<legend>`	|It defines a caption for a <fieldset>|
+  |`<legend>`	|It defines a caption for a `<fieldset>`|
   |`<datalist>`	|It provides a control to select among multiple options as well as to submit your own new option|
   |`<button>`	|It defines a button|
 
@@ -99,7 +99,7 @@
   |`<td>`	|It defines a cells in table|
   |`<caption>`	|It defines a caption for the table|
   |`<colgroup>`	|It defines a column group in the table|
-  |`<col>`	|It gives a property to the column within the <colgroup>|
+  |`<col>`	|It gives a property to the column within the `<colgroup>`|
 
 * Media tags
   | Syntax      | Description |
@@ -132,4 +132,4 @@
   |`<article>`	|It defines an article within the document|
   |`<section>	`|It defines section in the webpage|
   |`<details>	`|It defines a section that user can view or hide|
-  |`<summary>`	|It defines a visible part of the <details> element|
+  |`<summary>`	|It defines a visible part of the `<details>` element|
