@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #22254b;
+}
+header {
+  background-color: #373b69;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.search {
+  border: 2px solid #22254b;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+}
+.search::placeholder {
+  color: #7378c5;
+}
+.movie {
+  overflow: hidden;
+  background-color: #373b69;
+  border-radius: 3px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  color: white;
+  margin: 1rem;
+}
+.movie img {
+  height: 400px;
+  object-fit: cover;
+  max-width: 100%;
+}
+.movie-info {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  padding: 1rem;
+  letter-spacing: 0.5px;
+}
+.movie-info h3 {
+  margin: 0;
+  font-size: 13px;
+}
+.movie-info span {
+  background-color: #22254b;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-info span.grn {
+  color: green;
+}
+.movie-info span.orng {
+  color: orange;
+}
+.movie-info span.redd {
+  color: red;
+}
