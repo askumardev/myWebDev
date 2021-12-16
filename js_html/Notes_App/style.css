@@ -5,6 +5,56 @@
 }
 
 body {
+  background-color: #7bdaf3;
   font-family: "Poppins", sans-serif;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.note {
+  background-color: #fff;
+  height: 400px;
+  width: 400px;
+  margin: 20px;
+}
+.note .tools {
+  background-color: #9ec862;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+.note .tools button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+.note .main {
+  background-color: #fff;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.note textarea {
+  outline: none;
+  font-family: inherit;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+.note .hidden {
+  display: none;
+}
+.add {
+  background-color: #9ec862;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
 }
