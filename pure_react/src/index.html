@@ -17,18 +17,18 @@
       src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
     ></script>
     <script>
-      const Person = () => {
+      const Person = (props) => {
         return React.createElement("div", {}, [
-          React.createElement("h1", {}, "satish"),
-          React.createElement("p", {}, "kumar"),
+          React.createElement("h1", {}, props.name),
+          React.createElement("p", {}, props.occupation),
         ]);
       };
 
       const App = () => {
         return React.createElement("div", {}, [
           React.createElement("h1", {}, "React is rendered..."),
-          React.createElement(Person),
-          React.createElement(Person),
+          React.createElement(Person, { name: "satish", occupation: "dev" }),
+          React.createElement(Person, { name: "kumar", occupation: "rubydev" }),
         ]);
       };
 
