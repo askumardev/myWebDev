@@ -25,11 +25,11 @@
       };
 
       const App = () => {
-        return React.createElement(
-          "div",
-          {},
-          React.createElement("h1", {}, "React is rendered...")
-        );
+        return React.createElement("div", {}, [
+          React.createElement("h1", {}, "React is rendered..."),
+          React.createElement(Person),
+          React.createElement(Person),
+        ]);
       };
 
       ReactDOM.render(
