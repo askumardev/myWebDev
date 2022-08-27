@@ -110,6 +110,7 @@ body {
 }
 
 .screen {
+  text-align: center;
   background: #eab676;
   height: 70px;
   width: 70%;
