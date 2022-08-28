@@ -7,3 +7,16 @@
     <p>Sample paragraph</p>
   </body>
 </html>
+
+<!DOCTYPE html>
+  <head>
+    <title>Sample Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <h1>Sample text</h1>
+    <p>Sample paragraph</p>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
+
