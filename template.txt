@@ -20,3 +20,9 @@
   </body>
 </html>
 
+<html>
+  <body>
+    <font color="#00FF00">Font color example using color attribute</font>
+  </body>
+</html>
+
