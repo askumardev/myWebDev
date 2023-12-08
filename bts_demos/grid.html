@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
       <link rel="stylesheet" href="css/grid.css">
-    <title>Minimum Bootstrap HTML Skeleton</title>
+      <link rel="stylesheet" href="css/styles.css">
+    <title>Bootstrap Grid</title>
 
     <style></style>
   </head>
@@ -13,22 +14,38 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-8 h green">
-          <div class="row">
-            <div class="col-md-4 red">
-              <div class="row">
-                <div class="col-md-6 black">a</div>
-                <div class="col-md-6 blue">b</div>
-              </div>            
-            </div>
-            <div class="col-md-8 black">b</div>
-          </div>
+        <h1><center>Bootstrap Grid</center></h1>   
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="customDiv">Left</div>
         </div>
-        <div class="col-md-4 h blue">.col-md-4</div>        
-      </div>    
+        <div class="col-md-8">
+          <div class="customDiv">Main</div>
+        </div>
+        <div class="col-md-2">
+          <div class="customDiv">Right</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="customDiv1">Left</div>
+        </div>
+        <div class="col-md-4">
+          <div class="customDiv1">Main Left</div>
+        </div>
+        <div class="col-md-4">
+          <div class="customDiv1">Main Right</div>
+        </div>
+        <div class="col-md-2">
+          <div class="customDiv1">Right</div>
+        </div>
+      </div>  
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <script src="js/jquery3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

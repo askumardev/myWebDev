@@ -1,0 +1,15 @@
+.customDiv{
+  margin: 3px;
+  min-height: 200px;
+  background-color: aqua;
+  text-align: center;
+  font-size: large;
+}
+
+.customDiv1{
+  margin: 3px;
+  min-height: 150px;
+  background-color: coral;
+  text-align: center;
+  font-size: large;
+}
