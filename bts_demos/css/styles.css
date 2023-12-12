@@ -7,6 +7,11 @@
   font-size: large;
 }
 
+.custDiv{
+  padding:10px;
+  width:100%;
+}
+
 .hid{
   margin:10px;
   min-height:50px;
