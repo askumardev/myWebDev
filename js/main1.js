@@ -1,3 +1,5 @@
+//node js/main1.js
+
 console.log("========var========");
 var str = "hello";
 str = "hello.. again";
