@@ -1,3 +1,5 @@
+//node js/arrays.js
+
 const items = [
   { name: 'Bike', price: 100 },
   { name: 'TV', price: 200 },

@@ -16,6 +16,8 @@ if (true){
   // console.log(str1);
 }
 //console.log(str1); // we  will get ReferenceError: str1 is not defined
+//node js/main1.js
+
 console.log("========const========");
 const str2 = "hello";
 //str2 = "hello.. again";

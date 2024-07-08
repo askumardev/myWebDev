@@ -1,3 +1,5 @@
+//node js/script.js
+
 messaging('Hello...')
 
 messaging(5)
