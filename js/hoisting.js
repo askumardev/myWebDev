@@ -18,3 +18,29 @@ function getName(){
 getName();
 console.log(x);
 console.log(getName);
+
+a();
+b();
+c();
+d();
+
+function a() {
+  var x = 10;
+  console.log(x);
+}
+
+function b() {
+  var x = 100;
+  console.log(x);
+}
+function c() {
+  var y = 11;
+  console.log(x);
+}
+console.log(this.y);
+
+function d() {
+  x = 111;
+  console.log(x);
+}
+console.log(x);
