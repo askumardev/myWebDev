@@ -1,4 +1,4 @@
-//node js/script.js
+// node js/script.js
 
 messaging('Hello...')
 
