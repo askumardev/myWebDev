@@ -1,4 +1,7 @@
 //node js/sort.js
+const arr  = [3,2,5,1,6,4]
+arr.sort();
+console.log(arr);
 
 const items = [
   { name: "Edward", value: 21 },
