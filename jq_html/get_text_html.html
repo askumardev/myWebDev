@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#btn1").click(function(){
+        $("#demo1").append("<p>Hello...sample text here...</p>").text();
+        //alert("Text: " + $("#test").text());
+      });
+      $("#btn2").click(function(){
+        $("#demo2").append("<p>Hello...sample html here...</p>").html();
+        //alert("HTML: " + $("#test").html());
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <div id="demo1"></div><br>
+    <div id="demo2"></div><br>
+  </body>
+</html>
