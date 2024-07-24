@@ -30,9 +30,9 @@ console.log(b);
 console.log("========var========");
 var str = "hello";
 str = "hello.. again";
-console.log(str);
+console.log(str); //hello.. again 
 var str = "new hello"; // we can create new variables with same name
-console.log(str);
+console.log(str); //new hello  
 console.log("========let========");
 if (true){
   let str = "str in if";
