@@ -1,9 +1,14 @@
 <!DOCTYPE html>
   <head>
     <title>Sample Page</title>
+    <script src="scripts/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
     <h1>Sample text</h1>
     <p>Sample paragraph</p>
+    <button id="clickMe">Click Me</button>
+    <p style="color:red">Use this template to create new files. All css and js files are intact.</p>
+    <script type="text/javascript" src="scripts/script.js"></script>
   </body>
 </html>

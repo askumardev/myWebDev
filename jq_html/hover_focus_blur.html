@@ -10,10 +10,19 @@
       function(){
         alert("Bye! You now leave p1!");
       });
+      $("input").focus(function(){
+        $(this).css("background-color", "yellow");
+      });
+      $("input").blur(function(){
+        $(this).css("background-color", "green");
+      });
     });
     </script>
   </head>
   <body>
-  <p id="p1">This is a paragraph.</p>
+    <p id="p1">This is a paragraph.</p><br><br>
+
+    Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email">
   </body>
 </html>
