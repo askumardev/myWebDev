@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#b1").click(function(){
+        $("#pid1").hide(500);
+        $("#demo1").append("<p>Hello...jQuery..</p>");
+        $("#b1").hide();
+      });
+
+      $("#b2").click(function(){
+        $("#pid2").hide("slow", function(){
+          $("#demo1").hide();
+          $("#demo2").append("<p>Hello...jQuery..callback</p>");
+        });
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <button id="b1">Hide</button>
+    <!--The ex below has no callback parameter, & the text will be displayed before the hide effect is completed:-->
+    <p id="pid1">This is a paragraph with little content </p>
+    <div id="demo1"></div><br>
+
+    <button id="b2">Check Callback</button>
+    <!-- The example below has a callback parameter that is a function that will be executed after the hide effect is completed:-->
+    <p id="pid2">This is a paragraph with little content </p>
+    <div id="demo2"></div>
+  </body>
+</html>
