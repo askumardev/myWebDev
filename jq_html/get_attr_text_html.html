@@ -12,14 +12,22 @@
         $("#demo2").append("<p>Hello...sample html here...</p>").html();
         //alert("HTML: " + $("#test").html());
       });
+      $("#attrBtn").click(function(){
+        var link = $("#w3s").attr("href");
+        console.log(link);
+      });
     });
     </script>
   </head>
   <body>
     <p id="test">This is some <b>bold</b> text in a paragraph.</p>
     <button id="btn1">Show Text</button>
-    <button id="btn2">Show HTML</button>
     <div id="demo1"></div><br>
+
+    <button id="btn2">Show HTML</button>    
     <div id="demo2"></div><br>
+
+    <p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+    <button id="attrBtn">Show href Value</button>
   </body>
 </html>
