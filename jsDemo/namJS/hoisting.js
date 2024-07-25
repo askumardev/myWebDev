@@ -9,9 +9,7 @@ function myFun() {
   console.log("Hi");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("clickMe").addEventListener("click", myFun);
-});
+
 getName();
 console.log(x);
 console.log(getName);
