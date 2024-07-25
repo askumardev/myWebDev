@@ -4,7 +4,7 @@ setTimeout(function (){
   console.log("timer");
 }, 4000);
 
-function x(y){
+function x(y){ // y is the higher order function, x is callback funcion
   console.log("calling x");
   y();
 }
