@@ -7,9 +7,20 @@ console.log(this === window); // at global level
 
 var a = 10;
 function b(){
-	var x = 20;
+	var x = 20;  //this not in Global space
 }
 console.log(this.a);
-console.log(a);
+console.log(a);  //assumes a is in global space
 console.log(window.a);
 //console.log(x); //namJs.js:15 Uncaught ReferenceError: x is not defined
+console.log("--------------");
+messaging('Hello...')
+messaging(5)
+messaging('something')
+message = 'abcd'
+messaging(message)
+
+function messaging(message){
+  console.log(message)
+}
+console.log("--------------");
