@@ -30,12 +30,35 @@ function a2(){
 }
 a2();
 
-// function x(){
-//   var a = 10;
-//   function y(){
-//     console.log(a);
-//   }
-//   return y
+console.log("-----closures example---------");
+// function along with its lexical scope is a closure
+function xx(){
+  var aa = 10;
+  function yy(){
+    console.log(aa);
+  }
+  yy();
+}
+xx();
+
+function xxx(){
+  var aaa = 10;
+  function yyy(){
+    console.log(aaa);
+  }
+  //a = 100; z will return 100
+  return yyy;
+}
+var zzz = xxx();
+console.log(zzz);
+zzz(); //7
+
+// function xxx(){
+//   var aaa = 10;
+//   return function yyy(){
+//     console.log(aaa);
+//   }   
 // }
-// var z = x();
-// console.log(z);
+// var zzz = xxx();
+// console.log(zzz);
+// zzz();
