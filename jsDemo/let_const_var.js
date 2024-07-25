@@ -1,4 +1,4 @@
-//node js/let_const_var.js
+//node jsDemo/let_const_var.js
 
 
 // console.log(y); //ReferenceError: y is not defined  

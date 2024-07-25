@@ -1,4 +1,4 @@
-// node js/closure.js
+// node jsDemo/closure.js
 
 function a(){
   var a = 10;

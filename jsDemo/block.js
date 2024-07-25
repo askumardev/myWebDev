@@ -1,4 +1,4 @@
-// node js/block.js
+// node jsDemo/block.js
 
 {
   var a = 10;

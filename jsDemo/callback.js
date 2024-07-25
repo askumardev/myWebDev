@@ -1,4 +1,4 @@
-// node js/callback.js
+// node jsDemo/callback.js
 
 setTimeout(function (){
   console.log("timer");

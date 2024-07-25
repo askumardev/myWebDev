@@ -1,4 +1,4 @@
-//node js/arrays.js
+// node jsDemo/arrays.js
 
 const items = [
   { name: 'Bike', price: 100 },

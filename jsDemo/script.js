@@ -1,4 +1,4 @@
-// node js/script.js
+// node jsDemo/script.js
 
 messaging('Hello...')
 messaging(5)
@@ -9,7 +9,7 @@ messaging(message)
 function messaging(message){
   console.log(message)
 }
-
+console.log("--------------");
 var a;
 console.log(a);
 if(a === undefined){

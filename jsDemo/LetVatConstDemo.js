@@ -1,4 +1,4 @@
-//node js/LetVatConstDemo.js
+//node jsDemo/LetVatConstDemo.js
 
 var a = 10;
 let b = 20;

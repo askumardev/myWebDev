@@ -1,4 +1,4 @@
-//node js/sort.js
+// node jsDemo/sort.js
 const arr  = [3,2,5,1,6,4]
 arr.sort();
 console.log(arr);

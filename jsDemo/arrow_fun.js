@@ -1,4 +1,4 @@
-//node js/arrow_fun.js
+// node jsDemo/arrow_fun.js
 
 const materials = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
 
