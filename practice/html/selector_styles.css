@@ -1,0 +1,19 @@
+.container {
+    border: 1px solid;
+}
+
+.container .second{
+    background-color: aqua;
+}
+
+.container > p{
+    background-color: greenyellow;
+}
+
+.container ~ p{
+    background-color: royalblue;
+}
+
+.container ~ .fifth{
+    background-color: red;
+}
