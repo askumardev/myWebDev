@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Satish Kumar | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #3498db;
+      --bg-light: #f4f4f4;
+      --text-dark: #333;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 60px 20px 40px;
+      text-align: center;
+      position: relative;
+    }
+    header img.profile {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+    .hero-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+    .skills span {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 10px 15px;
+      margin: 8px 5px;
+      border-radius: 20px;
+      font-size: 0.95em;
+    }
+    .projects li {
+      margin-bottom: 20px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .projects li strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1.1em;
+    }
+    .contact-info p {
+      margin: 10px 0;
+    }
+    .contact-info i {
+      color: var(--accent);
+      margin-right: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--primary);
+      color: white;
+      margin-top: 40px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a2e0b5f7a6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Hero Image -->
+  <img class="hero-img" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61" alt="Coding workspace banner" />
+
+  <!-- Header -->
+  <header>
+    <img class="profile" src="https://i.imgur.com/0y0y0y0.jpg" alt="Profile Picture" />
+    <h1>Satish Kumar</h1>
+    <p>Senior Software Engineer | Ruby on Rails · Django · React</p>
+  </header>
+
+  <!-- About Me -->
+  <section>
+    <h2>About Me</h2>
+    <p>I’m a passionate software engineer with over 6.7 years of experience building scalable web apps. I specialize in Ruby on Rails, Django, and modern frontend tools. I'm based in Bangalore and currently exploring AI and machine learning.</p>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <span><i class="fab fa-ruby"></i> Ruby on Rails</span>
+      <span><i class="fas fa-database"></i> PostgreSQL</span>
+      <span><i class="fab fa-python"></i> Django</span>
+      <span><i class="fab fa-react"></i> React</span>
+      <span><i class="fab fa-docker"></i> Docker</span>
+      <span><i class="fab fa-aws"></i> AWS</span>
+      <span><i class="fas fa-bolt"></i> Hotwire</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2>Projects</h2>
+    <ul class="projects">
+      <li>
+        <strong>Inventory Management System</strong>
+        A full-featured warehouse & stock control app built using Rails and PostgreSQL.
+      </li>
+      <li>
+        <strong>Real-time Chat App</strong>
+        Messaging app using Django Channels and WebSockets with authentication.
+      </li>
+      <li>
+        <strong>PowerBI Analytics Integration</strong>
+        Embedded Microsoft PowerBI dashboards into a Rails admin panel.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> <a href="mailto:as*****.***@******.com">as*****.***@******.com</a></p>
+      <p><i class="fas fa-phone"></i> ***********</p>
+      <p><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/**********" target="_blank">linkedin.com/in/satishkumar</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Satish Kumar. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
