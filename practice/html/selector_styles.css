@@ -2,18 +2,18 @@
     border: 1px solid;
 }
 
-.container .second{
+ .container .second{ /* descendant */
     background-color: aqua;
 }
 
-.container > p{
+.container > p{  /* child */
     background-color: greenyellow;
 }
 
-.container ~ p{
+.container ~ p{  /* general sibling */
     background-color: royalblue;
 }
 
-.container ~ .fifth{
+.container ~ .fifth{   /* adjacent sibling */
     background-color: red;
 }
