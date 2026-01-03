@@ -1,0 +1,128 @@
+/* Container setup */
+.container {
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Shapes wrapper */
+.shapes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Common shape styles */
+.shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+/* Square */
+.square {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+
+.square:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Circle */
+.circle {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #36d1dc, #5b86e5);
+  border-radius: 50%;
+}
+
+.circle:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Rectangle */
+.rectangle {
+  width: 180px;
+  height: 100px;
+  background: linear-gradient(to right, #8360c3, #2ebf91);
+}
+
+.rectangle:hover {
+  transform: translateY(-10px);
+}
+
+/* Oval */
+.oval {
+  width: 180px;
+  height: 100px;
+  background: linear-gradient(to right, #11998e, #38ef7d);
+  border-radius: 50%;
+}
+
+.oval:hover {
+  transform: scaleX(1.2);
+}
+
+/* Diamond */
+.diamond {
+  width: 100px;
+  height: 100px;
+  background: #f7971e;
+  transform: rotate(45deg);
+}
+
+.diamond:hover {
+  transform: rotate(45deg) scale(1.2);
+  background: #ffd200;
+}
+
+/* Triangle container */
+.triangle-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+/* Triangle shape */
+.triangle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 120px solid #ff8008;
+  transition: transform 0.4s ease;
+}
+
+.triangle-container span {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+}
+
+.triangle-container:hover .triangle {
+  transform: rotate(-20deg) scale(1.1);
+}
