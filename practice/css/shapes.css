@@ -1,0 +1,106 @@
+/* Page styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Common shape styles */
+.shape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+/* Square */
+.square {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+}
+
+.square:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Circle */
+.circle {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #36d1dc, #5b86e5);
+  border-radius: 50%;
+}
+
+.circle:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Rectangle */
+.rectangle {
+  width: 180px;
+  height: 100px;
+  background: linear-gradient(to right, #8360c3, #2ebf91);
+}
+
+.rectangle:hover {
+  transform: translateY(-10px);
+}
+
+/* Triangle */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 120px solid #ff8008;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.triangle:hover {
+  transform: rotate(-20deg) scale(1.1);
+}
+
+/* Oval */
+.oval {
+  width: 180px;
+  height: 100px;
+  background: linear-gradient(to right, #11998e, #38ef7d);
+  border-radius: 50%;
+}
+
+.oval:hover {
+  transform: scaleX(1.2);
+}
+
+/* Diamond */
+.diamond {
+  width: 100px;
+  height: 100px;
+  background: #f7971e;
+  transform: rotate(45deg);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.diamond:hover {
+  transform: rotate(45deg) scale(1.2);
+  background: #ffd200;
+}
+
+.shape-wrapper {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
