@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Same Image with Srcset Example</title>
+
+    <style>
+      img {
+        height: auto;
+        margin: 10px;
+        border: 2px solid black;
+      }
+
+      .small {
+        width: 150px;
+      }
+      .medium {
+        width: 300px;
+      }
+      .large {
+        width: 600px;
+      }
+      .modmedium {
+        width: 500px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Same Image – Different Sizes with Srcset</h2>
+
+    <!-- Small Image -->
+    <img
+      src="https://picsum.photos/id/237/300/200"
+      srcset="
+        https://picsum.photos/id/237/200/150 200w,
+        https://picsum.photos/id/237/400/300 400w,
+        https://picsum.photos/id/237/800/600 800w
+      "
+      class="small"
+      alt="small image"
+    /><br />
+
+    <!-- Medium Image -->
+    <img
+      src="https://picsum.photos/id/237/300/200"
+      srcset="
+        https://picsum.photos/id/237/200/150 200w,
+        https://picsum.photos/id/237/400/300 400w,
+        https://picsum.photos/id/237/800/600 800w
+      "
+      class="medium"
+      width="300"
+      height="200"
+      alt="medium image"
+    /><br />
+
+    <!-- Modified Medium Image -->
+    <img
+      src="https://picsum.photos/id/237/300/200"
+      srcset="https://picsum.photos/id/237/200/150 500w"
+      class="modmedium"
+      width="400"
+      height="267"
+      alt="modified medium image"
+    /><br />
+
+    <!-- Large Image -->
+    <img
+      src="https://picsum.photos/id/237/300/200"
+      srcset="
+        https://picsum.photos/id/237/200/150 200w,
+        https://picsum.photos/id/237/400/300 400w,
+        https://picsum.photos/id/237/800/600 800w
+      "
+      class="large"
+      alt="large image"
+    />
+  </body>
+</html>
