@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Experience Calculator</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+      input,
+      button {
+        padding: 8px;
+        margin: 5px;
+      }
+      .result {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Experience Calculator</h2>
+
+    <label>Joining Date:</label>
+    <input type="date" id="joiningDate" /><br />
+
+    <label>Exit Date:</label>
+    <input type="date" id="exitDate" /><br />
+
+    <button onclick="calculateExperience()">Calculate</button>
+
+    <div class="result" id="output"></div>
+
+    <script>
+      function calculateExperience() {
+        const joining = new Date(document.getElementById("joiningDate").value);
+        const exit = new Date(document.getElementById("exitDate").value);
+
+        if (!joining || !exit || joining > exit) {
+          document.getElementById("output").innerHTML =
+            "Please enter valid dates.";
+          return;
+        }
+
+        let start = new Date(joining);
+        let end = new Date(exit);
+
+        let years = end.getFullYear() - start.getFullYear();
+        let months = end.getMonth() - start.getMonth();
+        let days = end.getDate() - start.getDate();
+
+        if (days < 0) {
+          months--;
+          const prevMonth = new Date(end.getFullYear(), end.getMonth(), 0);
+          days += prevMonth.getDate();
+        }
+
+        if (months < 0) {
+          years--;
+          months += 12;
+        }
+
+        const totalMonths =
+          (end.getFullYear() - start.getFullYear()) * 12 +
+          (end.getMonth() - start.getMonth());
+
+        document.getElementById("output").innerHTML = `
+        Total Months: ${totalMonths} months <br>
+        Experience: ${years} Years ${months} Months ${days} Days
+    `;
+      }
+    </script>
+  </body>
+</html>
