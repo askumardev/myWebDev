@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Scroll - 50 Item Trigger</title>
+    <style>
+      /* --- CSS STYLES --- */
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f7f6;
+        color: #333;
+        /* Extra padding at bottom so content isn't hidden by footer */
+        padding-bottom: 100px;
+      }
+
+      #content-container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .item {
+        background: white;
+        margin-bottom: 20px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border-left: 5px solid #007bff;
+        transition: transform 0.2s;
+      }
+
+      .item:hover {
+        transform: scale(1.01);
+      }
+
+      /* Loading Spinner */
+      .loader-container {
+        text-align: center;
+        padding: 20px;
+        font-weight: bold;
+        color: #007bff;
+      }
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        margin: 10px auto;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #007bff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Fixed Footer */
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: #222;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      /* Up Arrow Button */
+      #backToTop {
+        position: fixed;
+        bottom: 80px; /* Sits above the footer */
+        right: 30px;
+        width: 55px;
+        height: 55px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        z-index: 9999; /* Ensure it stays above everything */
+
+        /* Hidden State */
+        display: none;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      #backToTop.show-btn {
+        display: block;
+        opacity: 1;
+      }
+
+      #scroll-anchor {
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content-container"></div>
+
+    <div id="loader" class="loader-container">
+      <div class="spinner"></div>
+      <p>Fetching more titles...</p>
+    </div>
+
+    <div id="scroll-anchor"></div>
+
+    <footer>
+      <p>
+        Infinite Scroll Demo | <span id="item-count-display">Titles: 0</span>
+      </p>
+    </footer>
+
+    <button id="backToTop">↑</button>
+
+    <script>
+      /* --- JAVASCRIPT LOGIC --- */
+      const container = document.getElementById("content-container");
+      const loader = document.getElementById("loader");
+      const anchor = document.getElementById("scroll-anchor");
+      const backToTopBtn = document.getElementById("backToTop");
+      const countDisplay = document.getElementById("item-count-display");
+
+      let itemCount = 0;
+      let isFetching = false;
+
+      // Function to generate new content
+      function generateContent(amount) {
+        if (isFetching) return;
+        isFetching = true;
+        loader.style.display = "block";
+
+        // Simulate a network delay for a real feel
+        setTimeout(() => {
+          for (let i = 0; i < amount; i++) {
+            itemCount++;
+            const div = document.createElement("div");
+            div.className = "item";
+            div.innerHTML = `
+                        <h2>Title Entry #${itemCount}</h2>
+                        <p>This is unique content for item ${itemCount}. As you scroll further, more titles will be generated automatically.</p>
+                    `;
+            container.appendChild(div);
+          }
+
+          countDisplay.innerText = `Titles: ${itemCount}`;
+          loader.style.display = "none";
+          isFetching = false;
+
+          // Check if we need to show the button immediately after loading
+          checkButtonVisibility();
+        }, 500);
+      }
+
+      // Initial Load of 20 items
+      generateContent(20);
+
+      // 1. Setup Infinite Scroll (Intersection Observer)
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting && !isFetching) {
+            generateContent(15); // Load 15 more each time
+          }
+        },
+        { threshold: 0.5 },
+      );
+
+      observer.observe(anchor);
+
+      // 2. Up Arrow Visibility Logic
+      function checkButtonVisibility() {
+        const scrollThreshold = 600; // Pixels from top
+        const currentScroll =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        // CRITERIA: Must have 50+ titles AND be scrolled down
+        if (itemCount >= 50 && currentScroll > scrollThreshold) {
+          backToTopBtn.classList.add("show-btn");
+        } else {
+          backToTopBtn.classList.remove("show-btn");
+        }
+      }
+
+      // Listen for scroll events
+      window.addEventListener("scroll", checkButtonVisibility);
+
+      // 3. Click to go to start
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>
