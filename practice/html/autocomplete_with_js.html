@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Autocomplete Demo with JS</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 50px;
+        background: #f5f5f5;
+      }
+
+      .autocomplete {
+        position: relative;
+        width: 300px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      .suggestions {
+        position: absolute;
+        background: white;
+        border: 1px solid #ccc;
+        width: 100%;
+        max-height: 150px;
+        overflow-y: auto;
+        z-index: 10;
+      }
+
+      .suggestions div {
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .suggestions div:hover {
+        background: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Autocomplete Example</h2>
+
+    <div class="autocomplete">
+      <input type="text" id="search" placeholder="Type something..." />
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+
+    <script>
+      const data = [
+        "test",
+        "testing",
+        "tester",
+        "technology",
+        "template",
+        "team",
+        "teach",
+        "temporary",
+      ];
+
+      const input = document.getElementById("search");
+      const suggestionsBox = document.getElementById("suggestions");
+
+      input.addEventListener("input", function () {
+        const value = this.value.toLowerCase();
+        suggestionsBox.innerHTML = "";
+
+        if (!value) return;
+
+        const filtered = data.filter((item) => item.startsWith(value));
+
+        filtered.forEach((item) => {
+          const div = document.createElement("div");
+          div.textContent = item;
+
+          div.onclick = () => {
+            input.value = item;
+            suggestionsBox.innerHTML = "";
+          };
+
+          suggestionsBox.appendChild(div);
+        });
+      });
+
+      // Close suggestions when clicking outside
+      document.addEventListener("click", function (e) {
+        if (e.target !== input) {
+          suggestionsBox.innerHTML = "";
+        }
+      });
+    </script>
+  </body>
+</html>

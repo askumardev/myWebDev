@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Autocomplete without JS</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 50px;
+        background: #f5f5f5;
+      }
+
+      .autocomplete {
+        position: relative;
+        width: 300px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      .suggestions {
+        position: absolute;
+        background: white;
+        border: 1px solid #ccc;
+        width: 100%;
+        max-height: 150px;
+        overflow-y: auto;
+        z-index: 10;
+      }
+
+      .suggestions div {
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .suggestions div:hover {
+        background: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Autocomplete Example (No JavaScript)</h2>
+
+    <input type="text" list="suggestions" placeholder="Type here..." />
+
+    <datalist id="suggestions">
+      <!-- Test related -->
+      <option value="test"></option>
+      <option value="testing"></option>
+      <option value="tester"></option>
+      <option value="technology"></option>
+      <option value="template"></option>
+      <option value="team"></option>
+      <option value="teach"></option>
+      <option value="temporary">
+        <!-- Programming languages -->
+      </option>
+
+      <option value="Java"></option>
+      <option value="JavaScript"></option>
+      <option value="Python"></option>
+      <option value="Ruby"></option>
+      <option value="C"></option>
+      <option value="C++"></option>
+      <option value="C#"></option>
+      <option value="Go"></option>
+      <option value="Rust"></option>
+      <option value="Kotlin"></option>
+      <option value="Swift"></option>
+      <option value="PHP"></option>
+    </datalist>
+  </body>
+</html>
