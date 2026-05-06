@@ -1,52 +1,132 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="text-red-600">
-    <div>
-      <div>
-        <nav>
-          <div>
-            <h1>
-              <a href="/">Food Ninja</a>
-            </h1>
-          </div>
-          <ul>
-            <li>
-              <a href="#">
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>About</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>Contact</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <main>
-        <div>
-          <a href="#">Log in</a>
-          <a href="#">Sign up</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ninja - Recipes for Ninjas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-green-600">
+                        <a href="/">Food Ninja</a>
+                    </h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="#" class="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700">Log in</a>
+                    <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-900">Sign up</a>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <header>
-          <h2>Recipes</h2>
-          <h3>For Ninjas</h3>
-        </header>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-green-400 to-blue-500 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">Recipes</h2>
+                <h3 class="text-2xl md:text-3xl font-light mb-8">For Ninjas</h3>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Master the art of cooking with our collection of ninja-approved recipes. From quick meals to gourmet dishes, become a culinary ninja today!</p>
+                <a href="#" class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-gray-100 transition duration-300">Get Started</a>
+            </div>
+        </div>
+    </section>
 
-        <div>
-          <h4>Latest Recipes</h4>
+    <!-- Latest Recipes Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h4 class="text-3xl font-bold text-center mb-12 text-gray-800">Latest Recipes</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Recipe Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="https://via.placeholder.com/400x250" alt="Recipe 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h5 class="text-xl font-semibold mb-2">Ninja Stir Fry</h5>
+                        <p class="text-gray-600 mb-4">A quick and healthy stir fry packed with vegetables and protein.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700">Read More →</a>
+                    </div>
+                </div>
+                <!-- Recipe Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="https://via.placeholder.com/400x250" alt="Recipe 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h5 class="text-xl font-semibold mb-2">Samurai Sushi Rolls</h5>
+                        <p class="text-gray-600 mb-4">Homemade sushi rolls with fresh ingredients and expert techniques.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700">Read More →</a>
+                    </div>
+                </div>
+                <!-- Recipe Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img src="https://via.placeholder.com/400x250" alt="Recipe 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h5 class="text-xl font-semibold mb-2">Dragon's Breath Curry</h5>
+                        <p class="text-gray-600 mb-4">A spicy curry that will awaken your taste buds like a dragon's fire.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-700">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h4 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose Food Ninja?</h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h5 class="text-xl font-semibold mb-2">Lightning Fast</h5>
+                    <p class="text-gray-600">Prepare meals in record time with our quick recipes.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h5 class="text-xl font-semibold mb-2">High Quality</h5>
+                    <p class="text-gray-600">Only the best ingredients and techniques for superior taste.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h5 class="text-xl font-semibold mb-2">Expert Guidance</h5>
+                    <p class="text-gray-600">Learn from culinary masters with step-by-step instructions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-2xl font-bold mb-4">Food Ninja</h1>
+                <p class="mb-4">© 2024 Food Ninja. All rights reserved.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
 
           <div>
             <!-- cards go here -->
