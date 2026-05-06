@@ -2,10 +2,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="/tailCss/public/tail-styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <h1 class="text-3xl font-bold underline">Hello world!</h1>
+
+    <div class="container mx-auto px-4 py-8">
+      <header
+        class="flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <h1 class="text-3xl font-bold text-slate-900 dark:text-slate-80">
+          Tailwind Cheat Sheet
+        </h1>
+        <button
+          class="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Get Started
+        </button>
+      </header>
+      <section class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <article
+          class="rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-sm"
+        >
+          <h2 class="text-xl font-semibold mb-4">Layout</h2>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            Use `flex`, `grid`, `space-x-*`, and responsive prefixes to build
+            modern layouts quickly.
+          </p>
+        </article>
+      </section>
+    </div>
   </body>
 </html>
