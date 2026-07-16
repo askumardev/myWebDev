@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Interview Questions</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem auto;
+        max-width: 900px;
+        line-height: 1.7;
+        padding: 0 1rem;
+      }
+
+      h1 {
+        color: #2c3e50;
+      }
+
+      .card {
+        background: #f8f9fa;
+        border-left: 5px solid #3498db;
+        padding: 1rem 1.2rem;
+        margin-bottom: 1rem;
+        border-radius: 6px;
+      }
+
+      .question {
+        font-weight: bold;
+        color: #1f2937;
+      }
+
+      .answer {
+        margin-top: 0.4rem;
+        color: #4b5563;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Interview Questions and Answers</h1>
+
+<section class="card">
+  <div class="question">Note</div>
+  <div class="answer">Use this page as a quick reference for common JavaScript interview topics and short explanations you can review before an interview.</div>
+</section>
+
+    <div class="card">
+      <div class="question">1. What is JavaScript?</div>
+      <div class="answer">JavaScript is a lightweight, interpreted programming language used to make web pages interactive.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">2. What is the difference between let, const, and var?</div>
+      <div class="answer">var is function-scoped and can be reassigned; let is block-scoped and can be reassigned; const is block-scoped and cannot be reassigned.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">3. What is hoisting?</div>
+      <div class="answer">Hoisting means declarations are moved to the top of their scope during execution, but initialization remains in place.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">4. What is a closure?</div>
+      <div class="answer">A closure is a function that remembers variables from its outer scope even after that scope has finished executing.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">5. What is the difference between == and ===?</div>
+      <div class="answer">== compares values after type coercion, while === compares both value and type.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">6. What is the DOM?</div>
+      <div class="answer">The DOM is the Document Object Model, which represents HTML elements as objects that can be manipulated with JavaScript.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">7. What is an arrow function?</div>
+      <div class="answer">An arrow function provides a shorter syntax for writing functions and does not have its own this binding.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">8. What is a promise?</div>
+      <div class="answer">A promise represents the eventual completion or failure of an asynchronous operation.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">9. What is async/await?</div>
+      <div class="answer">async/await is syntax that makes asynchronous code easier to read and write by using promises in a more synchronous style.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">10. What is the difference between map and forEach?</div>
+      <div class="answer">map creates a new array with the results, while forEach just iterates and does not return a new array.</div>
+    </div>
+
+    <div class="card">
+      <div class="question">11. What is event bubbling?</div>
+      <div class="answer">Event bubbling means an event starts from the target element and moves upward through its parent elements. This helps in handling events efficiently.</div>
+      <pre><code>document.querySelector('.parent').addEventListener('click', () => {
+  console.log('Parent clicked');
+});
+
+document.querySelector('.child').addEventListener('click', () => {
+  console.log('Child clicked');
+});</code></pre>
+    </div>
+
+    <div class="card">
+      <div class="question">12. What is the difference between synchronous and asynchronous code?</div>
+      <div class="answer">Synchronous code runs line by line, while asynchronous code allows other tasks to continue while waiting for a result.</div>
+      <pre><code>console.log('Start');
+
+setTimeout(() => {
+  console.log('Later');
+}, 1000);
+
+console.log('End');</code></pre>
+    </div>
+
+    <div class="card">
+      <div class="question">13. What is destructuring?</div>
+      <div class="answer">Destructuring allows you to unpack values from arrays or objects into variables in a concise way.</div>
+      <pre><code>const user = { name: 'Asha', age: 22 };
+const { name, age } = user;
+
+console.log(name); // Asha
+console.log(age); // 22</code></pre>
+    </div>
+
+    <div class="card">
+      <div class="question">14. What is the spread operator?</div>
+      <div class="answer">The spread operator expands an iterable into individual elements, which is useful for copying arrays or combining values.</div>
+      <pre><code>const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+
+console.log(arr2); // [1, 2, 3, 4, 5]</code></pre>
+    </div>
+
+    <div class="card">
+      <div class="question">15. What is the difference between null and undefined?</div>
+      <div class="answer">undefined means a variable has been declared but no value assigned yet. null is an intentional empty value.</div>
+      <pre><code>let a;
+let b = null;
+
+console.log(a); // undefined
+console.log(b); // null</code></pre>
+    </div>
+
+    <div class="card">
+      <div class="question">16. What is the difference between shallow copy and deep copy?</div>
+      <div class="answer">A shallow copy copies the top level of an object, while a deep copy duplicates nested objects too.</div>
+      <pre><code>const person = { name: 'Ravi', address: { city: 'Delhi' } };
+const shallowCopy = { ...person };
+
+shallowCopy.address.city = 'Mumbai';
+console.log(person.address.city); // Mumbai</code></pre>
+    </div>
+
+    <div class="card">
+      <div class="question">17. What is array reduce used for?</div>
+      <div class="answer">reduce is used to iterate through an array and accumulate a single result such as a sum or object.</div>
+      <pre><code>const numbers = [1, 2, 3, 4];
+const total = numbers.reduce((sum, num) => sum + num, 0);
+
+console.log(total); // 10</code></pre>
+    </div>
+
+    <div class="card">
+      <div class="question">18. What is the this keyword?</div>
+      <div class="answer">The this keyword refers to the object that is currently executing the function, depending on how the function is called.</div>
+      <pre><code>const user = {
+  name: 'Nina',
+  greet() {
+    console.log(this.name);
+  }
+};
+
+user.greet();</code></pre>
+    </div>
+
+    <div class="card">
+      <div class="question">19. What is a callback function?</div>
+      <div class="answer">A callback function is a function passed as an argument to another function and executed later.</div>
+      <pre><code>function greet(name, callback) {
+  callback(name);
+}
+
+greet('Sam', (name) => {
+  console.log('Hello ' + name);
+});</code></pre>
+    </div>
+
+    <div class="card">
+      <div class="question">20. What is the difference between function declaration and function expression?</div>
+      <div class="answer">A function declaration is hoisted and can be used before it is defined, while a function expression is created at runtime and is not hoisted in the same way.</div>
+      <pre><code>sayHello();
+
+function sayHello() {
+  console.log('Hello from declaration');
+}
+
+const greet = function() {
+  console.log('Hello from expression');
+};
+
+greet();</code></pre>
+    </div>
+  </body>
+</html>
