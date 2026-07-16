@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce Search Example</title>
+
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          padding: 40px;
+      }
+
+      input {
+          width: 400px;
+          padding: 10px;
+          font-size: 16px;
+      }
+
+      button {
+          padding: 10px 16px;
+          margin-left: 10px;
+          font-size: 16px;
+          cursor: pointer;
+      }
+
+      #result {
+          margin-top: 20px;
+          color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Debounced Search</h2>
+
+    <div>
+      <input
+        type="text"
+        id="searchBox"
+        placeholder="Type something..."/>
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+      const searchBox = document.getElementById("searchBox");
+      const searchBtn = document.getElementById("searchBtn");
+      const result = document.getElementById("result");
+
+      // Debounce helper: delays calling fn until `delay` ms of silence
+      function debounce(fn, delay = 500) {
+        let timeoutId;
+        return function (...args) {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(() => fn.apply(this, args), delay);
+        };
+      }
+
+      function performSearch(searchText) {
+        if (!searchText.trim()) {
+          result.innerHTML = "";
+          return;
+        }
+
+        const url = `https://www.google.com/search?q=${encodeURIComponent(searchText)}`;
+
+        result.innerHTML = `
+          <strong>Search ready:</strong><br>
+          ${url}
+        `;
+      }
+
+      // Wrap performSearch in debounce - waits 500ms after user stops typing
+      const debouncedSearch = debounce(performSearch, 500);
+
+      // Trigger debounced search as the user types
+      searchBox.addEventListener("input", function () {
+        debouncedSearch(searchBox.value.trim());
+      });
+
+      // Button still opens the search immediately, no debounce needed
+      searchBtn.addEventListener("click", function () {
+        const searchText = searchBox.value.trim();
+        if (!searchText) return;
+        const url = `https://www.google.com/search?q=${encodeURIComponent(searchText)}`;
+        window.open(url, "_blank", "noopener,noreferrer");
+      });
+    </script>
+  </body>
+</html>
